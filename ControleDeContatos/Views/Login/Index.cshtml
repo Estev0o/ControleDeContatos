@@ -1,0 +1,44 @@
+﻿@model LoginModel
+@{
+    Layout = "_LayoutDeslogada";
+    ViewData["Title"] = "Login";
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <buttun type="buttun" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</buttun>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <buttun type="buttun" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</buttun>
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read!</p>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+<form asp-controller="Login" asp-action="Entrar" method="post">
+    <div class="mb-3">
+        <label for="login" class="form-label">Login</label>
+        <input type="text" asp-for=Login class="form-control" id="login" />
+        @Html.ValidationMessageFor( x => x.Login)
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" asp-for=Senha class="form-control" id="senha">
+        @Html.ValidationMessageFor( x => x.Senha)
+    </div>
+
+    <p class="mb-4 text-sm mx-auto">Esqueceu sua senha?
+        <a asp-action="RedefinirSenha" asp-controller="Login" class="text-primary text-gradient font-weight-bold text-decoration-none">Redefinir minha senha</a>
+    </p>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success">Entrar</button>
+    </div>
+</form>

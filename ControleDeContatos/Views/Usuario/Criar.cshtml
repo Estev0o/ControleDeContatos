@@ -1,0 +1,52 @@
+﻿@using ControleDeContatos.Enum;
+@model UsuarioModel   
+@{
+        ViewData["Title"] = "Criar Usuario";
+    }
+
+    <div class="text-center">
+        <h1 class="display-4">Cadastrar Usuario</h1>
+    </div>
+
+    <form asp-controller="Usuario" asp-action="Criar" method="post">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" asp-for="Nome" class="form-control"placeholder="Digite o nome do usuario">
+            @Html.ValidationMessageFor(x => x.Nome)
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="text" asp-for="Email" class="form-control" placeholder="Digite o e-mail do usuario">
+        @Html.ValidationMessageFor(x => x.Email)
+        </div>
+
+        <div class="mb-3">
+            <label for="login" class="form-label">Login</label>
+            <input type="text" asp-for="Login" class="form-control" placeholder="Digite o Login do usuario">
+        @Html.ValidationMessageFor(x => x.Login)
+        </div>
+
+        <div class="mb-3">
+            <label for="perfil" class="form-label">Perfil</label>
+        <select asp-for="Perfil" class="form-control">
+            <option value="">Selecione</option>
+            <option value="@PerfilEnum.admin">Admin</option>
+            <option value="@PerfilEnum.padrao">Padrao</option>
+            </select>
+        @Html.ValidationMessageFor(x => x.Perfil)
+        </div>
+
+        <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input type="password" asp-for="Senha" class="form-control" placeholder="Digite a senha do usuaio">
+            @Html.ValidationMessageFor(x => x.Senha)
+        </div>
+
+
+
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary btn-">Cadastrar</button>
+            <a class="btn btn-secondary btn-block" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>
+        </div>
+    </form>

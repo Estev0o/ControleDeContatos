@@ -1,0 +1,55 @@
+﻿@using ControleDeContatos.Enum;
+@model AlterarSenhaModel
+@{
+    ViewData["Title"] = "Alterar Senha do Usuario";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Alterar Senha do Usuario</h1>
+</div>
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read!</p>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<form asp-controller="AlterarSenha" asp-action="Alterar" method="post">
+
+    <div class="form-grup">
+        <label for="senha" class="form-label">Senha Atual</label>
+        <input type="password" asp-for="SenhaAtual" class="form-control" placeholder="Digite a senha atual do usuario">
+        @Html.ValidationMessageFor(x => x.SenhaAtual)
+    </div>
+
+    <div class="form-grup">
+        <label for="NovaSenha" class="form-label">Nova senha</label>
+        <input type="password" asp-for="NovaSenha" class="form-control" placeholder="Digite a nova senha do usuario">
+        @Html.ValidationMessageFor(x => x.NovaSenha)
+    </div>
+
+    <div class="form-grup">
+        <label for="ConfirmarNovaSenha" class="form-label">Confirmar sua nova Senha</label>
+        <input type="password" asp-for="ConfirmarNovaSenha" class="form-control" placeholder="Confirme sua a nova senha do usuario">
+        @Html.ValidationMessageFor(x => x.ConfirmarNovaSenha)
+    </div>
+
+    <br />
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+        <a class="btn btn-secondary btn-block" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
+    </div>
+</form>
