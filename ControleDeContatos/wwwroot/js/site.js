@@ -5,14 +5,24 @@
 
 
 
-$(document).ready(function(){
+$(document).ready(function () {
     getDatatable('#table-contatos');
     getDatatable('#table-usuarios');
 
-    $('btn-total-contatos').click(function () {
-        $('#modalContatoUsuario').modal();
-    })
-})
+    $('.btn-total-contatos').click(function () {
+        var usuarioId = $(this).attr('usuario-id');
+        console.log(usuarioId);
+        $.ajax({
+            type: 'GET',
+            url: '/Usuario/ListarContatosPorUsuarioId/' + usuarioId,
+            success: function (result) {
+                $('#listaContatosUsuarios').html(result);
+                $('#modalContatoUsuario').modal();
+                getDatatable('#table-contatos-usuarios');
+            }
+        });
+    });
+});
 
 function getDatatable(id) {
     $(id).DataTable({
