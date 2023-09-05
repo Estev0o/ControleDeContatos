@@ -57,7 +57,8 @@
                         <td>@usuario.Email</td>
                         <td>@(usuario.Perfil == ControleDeContatos.Enum.PerfilEnum.admin ? "Administrador": "Padrao")</td>
                         <td>
-                            <a href="#" class="btn btn-success btn-sm btn-total-contatos">@(usuario.Contatos != null && usuario.Contatos.Any() ? usuario.Contatos.Count() : 0)</a>
+                            <a href="javascript:" usuario-id="@usuario.Id" class="btn btn-success btn-sm btn-total-contatos">
+                                @(usuario.Contatos != null && usuario.Contatos.Any() ? usuario.Contatos.Count() : 0)</a>
                         </td>
                         <td>@usuario.DataCadastro</td>
                         <td>
@@ -72,33 +73,16 @@
         </tbody>
     </table>
 
+
     <div id="modalContatoUsuario" class="modal" tabindex="-1">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Listagem de contatos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    
-                    <table class="table" id="table-contatos">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">E-mail</th>
-                                <th scope="col">Celular</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">@Contato.Id</th>
-                                <td>@Contato.Nome</td>
-                                <td>@Contato.Email</td>
-                                <td>@Contato.Celular</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div id="listaContatosUsuarios"></div>
                 </div>
             </div>
         </div>
