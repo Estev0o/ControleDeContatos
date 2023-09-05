@@ -57,7 +57,7 @@
                         <td>@usuario.Email</td>
                         <td>@(usuario.Perfil == ControleDeContatos.Enum.PerfilEnum.admin ? "Administrador": "Padrao")</td>
                         <td>
-                            <a href="#" class="btn btn-success btn-sm btn-total-contatos">10</a>
+                            <a href="#" class="btn btn-success btn-sm btn-total-contatos">@(usuario.Contatos != null && usuario.Contatos.Any() ? usuario.Contatos.Count() : 0)</a>
                         </td>
                         <td>@usuario.DataCadastro</td>
                         <td>
