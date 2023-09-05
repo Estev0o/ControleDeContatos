@@ -40,6 +40,7 @@
                 <th scope="col">Login</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Perfil</th>
+                <th scope="col">Total de Contatos</th>
                 <th scope="col">Data de cadastro</th>
                 <th scope="col"></th>
             </tr>
@@ -55,6 +56,9 @@
                         <td>@usuario.Login</td>
                         <td>@usuario.Email</td>
                         <td>@(usuario.Perfil == ControleDeContatos.Enum.PerfilEnum.admin ? "Administrador": "Padrao")</td>
+                        <td>
+                            <a href="#" class="btn btn-success btn-sm btn-total-contatos">10</a>
+                        </td>
                         <td>@usuario.DataCadastro</td>
                         <td>
                             <div class="btn-group" role="group">
