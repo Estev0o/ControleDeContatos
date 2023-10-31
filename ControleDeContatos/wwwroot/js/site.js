@@ -22,7 +22,7 @@ $(document).ready(function () {
             }
         });
     });
-});
+}); 
 
 function getDatatable(id) {
     $(id).DataTable({
