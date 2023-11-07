@@ -1,13 +1,11 @@
-<h1>Projeto Controle de Contatos</h1>
 <div align="center">
+<h1>Projeto Controle de Contatos</h1>
 <p>Projeto construido com intuito de fazre um CRUD utilizando 'usuarios' e 'contatos' como exemplos. 
 Um fato interessante desse projeto, ele está sendo usado como base para fazer meu <strong>Trabalho de Graduação</strong>.</p>
 
-<h4 align="center"> Status do projeto 
-<br>
-<br>
-<p> ✅  Finalizado 🏅</p>
-</h4>
+<h2 align="center"> Status do projeto 
+<p> ✅  Finalizado 🏅 </p></h2>
+
 
 <h3> ⚓ Funcionalidades da aplicação:</h3> 
 
@@ -21,6 +19,32 @@ Um fato interessante desse projeto, ele está sendo usado como base para fazer m
 - [x] Sessão usuario logado e deslogado
 - [x] Esqueceu a senha (SMTP)
 - [x] Visualizar quantidades de contatos que um usuário tem
+
+
+<h2>🛠 Tecnologias</h2> 
+
+<p>As seguintes ferramentas foram usadas na construção do projeto:</p>
+
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" height="40" alt="visualstudio logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="bootstrap logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" height="40" alt="jquery logo"  />
+  <img width="12" />
+  <img src="https://cdn.simpleicons.org/microsoftsqlserver/CC2927" height="40" alt="microsoftsqlserver logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="github logo"  />
+ 
 
 <h2>Tela de Login</h2>
 <img src="https://github.com/Estev0o/ControleDeContatos/blob/master/ImagensR/tela-login.png" alt="Tela de Login">
