@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Projeto Controle de Contatos</h1>
-<p>Projeto construido com intuito de fazre um CRUD utilizando 'usuarios' e 'contatos' como exemplos. 
+<p>Projeto construido com intuito de fazer um CRUD utilizando 'usuarios' e 'contatos' como exemplos. 
 Um fato interessante desse projeto, ele está sendo usado como base para fazer meu <strong>Trabalho de Graduação</strong>.</p>
 
 <p align="center"> <h2>Índice</h2>
